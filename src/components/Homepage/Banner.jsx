@@ -3,18 +3,18 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="bg-[#F0F1EE] border border-2 border-black">
-            <div className="p-8">
-                <div className="flex gap-10">
-                    <div>
-                        <h1 className="text-5xl font-bold">#1 Platform Powering Health and Wellness</h1>
-                        <h5 className="pt-5 pb-2 font-medium">
+        <div className="bg-[#F0F1EE]">
+            <div className="px-8">
+                <div className="flex items-center justify-between gap-5">
+                    <div className='flex flex-col  justify-center '>
+                        <h1 className="text-5xl font-bold w-3/4">#1 Platform Powering Health and Wellness</h1>
+                        <h5 className="pt-5 pb-2 font-medium w-3/4">
                             We’re restoring home as the primary place of personal well-being
                         </h5>
-                        <p>
+                        <p className='w-3/4'>
                             Health is not just about what you're eating. It's also about what you're thinking and saying
                         </p>
-                        <div>
+                        <div className='mt-2'>
                             <button className="btn btn-primary mr-4">Browse Courses</button>
                             <button className="btn btn-outline text-primary">Get Started</button>
                         </div>
@@ -24,12 +24,12 @@ const Banner = () => {
                         <Image
                             src="/banner.png"
                             alt="banner image"
-                            width={650}
-                            height={600}
+                            width={500}
+                            height={500}
                             className=""
                         />
                         <div
-                            className="absolute bottom-0 left-0 m-1 flex flex-col  bg-[#EED9C9] rounded-lg"
+                            className="absolute bottom-0 left-0 m-1 flex flex-col mr-3 bg-[#EED9C9] rounded-lg"
                         >
                             {/* Use w-full to match the image width */}
                             <div className="flex gap-3 px-8 py-4 ">
