@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,10 +20,24 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="pinemeshTheme">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <nav>
+          <button>Pinemesh</button>
+          <ul>
+            <Link href={"/courses"}>Courses</Link>
+            <Link href={"/courses"}>Instructors</Link>
+            <Link href={"/courses"}>Blogs</Link>
+            <Link href={"/courses"}>About</Link>
+            <Link href={"/courses"}>Contact</Link>
+          </ul>
+          <div>
+            <button>Icon</button>
+          </div>
+          <button className="btn btn-primary">Login</button>
+        </nav>
+
         {children}
       </body>
     </html>
