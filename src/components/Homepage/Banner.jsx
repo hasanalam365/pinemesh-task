@@ -1,12 +1,24 @@
+"use client"
 import Image from 'next/image';
 import React from 'react';
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
 
 const Banner = () => {
     return (
         <div className="bg-[#F0F1EE]">
             <div className="px-8">
                 <div className="flex items-center justify-between gap-5">
-                    <div className='flex flex-col  justify-center '>
+            <div className='flex flex-col  justify-center '>
+              <div className='flex items-center  gap-2 mb-5'>
+                 <Rating
+      style={{ maxWidth: 130 }}
+      value={4.52}
+      readOnly
+    />
+    <p className='font-medium'>4.9 (560)</p>
+             </div>
                         <h1 className="text-5xl font-bold w-3/4">#1 Platform Powering Health and Wellness</h1>
                         <h5 className="pt-5 pb-2 font-medium w-3/4">
                             We’re restoring home as the primary place of personal well-being
