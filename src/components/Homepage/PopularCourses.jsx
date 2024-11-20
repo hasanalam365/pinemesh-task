@@ -2,7 +2,24 @@ import Image from 'next/image';
 import React from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const PopularCourses = () => {
+const courses = async () => {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'; 
+    const res = await fetch(`${baseUrl}/courses.json`);
+  
+    if (!res.ok) {
+        throw new Error("Failed to fetch courses");
+    }
+
+    const data = await res.json();
+    return data;
+};
+
+
+const PopularCourses = async() => {
+
+    const allCourses = await courses()
+    console.log(allCourses)
+
     return (
         <div className="mt-8 px-8 space-y-4">
             {/* Section Heading */}
