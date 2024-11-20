@@ -2,7 +2,8 @@
   {
     "coursesType": ["Beginner", "Nutrition and Diet"],
     "title": "Foundation of Sleep: Sleep Science and Disorders",
-    "rating": ["4.8", "230"],
+    "rating": 4.8,
+    "review": 548,
     "courseDuration": "5h 20m",
     "totalLessons": "5 Lessons",
     "author": {
@@ -14,7 +15,8 @@
   {
     "coursesType": ["Intermediate", "Health and Wellness"],
     "title": "Parenting in the Digital Age: Managing Screen Time",
-    "rating": ["4.7", "380"],
+    "rating": 4.0,
+    "review": 350,
     "courseDuration": "4h 45m",
     "totalLessons": "6 Lessons",
     "author": {
@@ -26,7 +28,8 @@
   {
     "coursesType": ["Beginner", "Nutrition and Diet"],
     "title": "Holistic Health: Mind, Body, and Spirit",
-    "rating": ["4.9", "500"],
+    "rating": 4.6,
+    "review": 552,
     "courseDuration": "7h 10m",
     "totalLessons": "8 Lessons",
     "author": {
@@ -38,7 +41,8 @@
   {
     "coursesType": ["Beginner", "Nutrition and Diet"],
     "title": "Introduction to Diet and Nutrition Basics",
-    "rating": ["4.6", "150"],
+    "rating": 4.0,
+    "review": 961,
     "courseDuration": "3h 30m",
     "totalLessons": "4 Lessons",
     "author": {
@@ -50,7 +54,8 @@
   {
     "coursesType": ["Advanced", "Sleep Science"],
     "title": "Advanced Sleep Techniques for Productivity",
-    "rating": ["4.5", "620"],
+    "rating": 4.8,
+    "review": 548,
     "courseDuration": "8h 50m",
     "totalLessons": "10 Lessons",
     "author": {
