@@ -11,6 +11,7 @@ const Homepage = () => {
             <PopularCourses></PopularCourses>
             <ProvideSection></ProvideSection>
             <Testimonials></Testimonials>
+            
         </div>
     );
 };

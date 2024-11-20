@@ -87,7 +87,7 @@ const Testimonials = () => {
           clickable: true
         }}
        
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
         {reviews.map((review, index) => (
