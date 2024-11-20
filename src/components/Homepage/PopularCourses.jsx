@@ -1,16 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { Rating } from '@smastrom/react-rating'
-
-import '@smastrom/react-rating/style.css'
+import { Rating } from '@smastrom/react-rating';
+import '@smastrom/react-rating/style.css';
 import { MdMenuBook } from "react-icons/md";
 import { CiStopwatch } from "react-icons/ci";
 
 const courses = async () => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'; 
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
     const res = await fetch(`${baseUrl}/courses.json`);
-  
+
     if (!res.ok) {
         throw new Error("Failed to fetch courses");
     }
@@ -19,11 +18,8 @@ const courses = async () => {
     return data;
 };
 
-
-const PopularCourses = async() => {
-
-    const allCourses = await courses()
-    console.log(allCourses.rating)
+const PopularCourses = async () => {
+    const allCourses = await courses();
 
     return (
         <div className="mt-8 px-8 space-y-4">
@@ -44,7 +40,7 @@ const PopularCourses = async() => {
 
             {/* Courses Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                { allCourses.map((course, index) => (
+                {allCourses.map((course, index) => (
                     <div key={index} className="card card-compact bg-base-100 shadow-xl">
                         {/* Card Image */}
                         <figure>
@@ -59,51 +55,61 @@ const PopularCourses = async() => {
 
                         {/* Card Body */}
                         <div className="card-body">
-                          <div className='flex  gap-3 '>
-    {
-        course.coursesType.map((courseType, idx) => (
-            <button key={idx} className={`${idx==0? "bg-[#FFF5E6]": "bg-[#F5FAD6]"} py-1 px-2 rounded-lg `}>
-                {courseType}
-            </button>
-        ))
-    }
-</div>
+                            {/* Course Type Badges */}
+                            <div className="flex gap-3">
+                                {course.coursesType.map((courseType, idx) => (
+                                    <button
+                                        key={idx}
+                                        className={`${
+                                            idx === 0 ? "bg-[#FFF5E6]" : "bg-[#F5FAD6]"
+                                        } py-1 px-2 rounded-lg`}
+                                    >
+                                        {courseType}
+                                    </button>
+                                ))}
+                            </div>
 
-                           
+                            {/* Course Title */}
                             <h2 className="card-title">{course.title}</h2>
-                             <div className='flex items-center  gap-2 mb-5'>
-                 <Rating
-      style={{ maxWidth: 110 }}
-      value={course.rating}
-      readOnly
-                                />
-                            <p className='font-medium'>{course.rating} <span>({course.review})</span></p>  
-   
-             </div>
-                            <div className='flex items-center  gap-3'>
-                                <div className='flex gap-2'>
-                                     <CiStopwatch className='text-xl text-[#9998E1]'/>
+
+                            {/* Rating and Reviews */}
+                            <div className="flex items-center gap-2 mb-5">
+                                <Rating style={{ maxWidth: 110 }} value={course.rating} readOnly />
+                                <p className="font-medium">
+                                    {course.rating} <span>({course.review})</span>
+                                </p>
+                            </div>
+
+                            {/* Course Duration and Lessons */}
+                            <div className="flex items-center gap-3">
+                                <div className="flex gap-2">
+                                    <CiStopwatch className="text-xl text-[#9998E1]" />
                                     <p>{course.courseDuration}</p>
                                 </div>
-                                <div  className='flex gap-2'>
-                                     <MdMenuBook className='text-xl text-[#9998E1]'/>
-                                   <p>{course.totalLessons}</p>
+                                <div className="flex gap-2">
+                                    <MdMenuBook className="text-xl text-[#9998E1]" />
+                                    <p>{course.totalLessons}</p>
                                 </div>
-                               
                             </div>
+
                             <div className="divider"></div>
-                            <div className='flex items-center justify-between'>
-                                <div className='flex items-center justify-center gap-4'>
-                                <div className="avatar">
-  <div className="w-[50px] rounded-full">
-    <Image src="/one.png" width={50} height={50} alt='card image'/>
-  </div>
-</div>
 
-
-                                    <h5 className='text-lg font-medium'>{ course.author.name}</h5>
+                            {/* Author and Cost */}
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-4">
+                                    <div className="avatar">
+                                        <div className="w-[50px] rounded-full">
+                                            <Image
+                                                src="/one.png"
+                                                width={50}
+                                                height={50}
+                                                alt="Author profile"
+                                            />
+                                        </div>
+                                    </div>
+                                    <h5 className="text-lg font-medium">{course.author.name}</h5>
                                 </div>
-                                <h5 className='text-lg font-medium'>{course.author.cost}</h5>
+                                <h5 className="text-lg font-medium">{course.author.cost}</h5>
                             </div>
                         </div>
                     </div>
