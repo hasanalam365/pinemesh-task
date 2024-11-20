@@ -80,12 +80,30 @@ const PopularCourses = async() => {
                             <p className='font-medium'>{course.rating} <span>({course.review})</span></p>  
    
              </div>
-                            <div>
-                                <CiStopwatch />
-                                <MdMenuBook />
-                           </div>
-                            <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Buy Now</button>
+                            <div className='flex items-center  gap-3'>
+                                <div className='flex gap-2'>
+                                     <CiStopwatch className='text-xl text-[#9998E1]'/>
+                                    <p>{course.courseDuration}</p>
+                                </div>
+                                <div  className='flex gap-2'>
+                                     <MdMenuBook className='text-xl text-[#9998E1]'/>
+                                   <p>{course.totalLessons}</p>
+                                </div>
+                               
+                            </div>
+                            <div className="divider"></div>
+                            <div className='flex items-center justify-between'>
+                                <div className='flex items-center justify-center gap-4'>
+                                <div className="avatar">
+  <div className="w-[50px] rounded-full">
+    <Image src="/one.png" width={50} height={50} alt='card image'/>
+  </div>
+</div>
+
+
+                                    <h5 className='text-lg font-medium'>{ course.author.name}</h5>
+                                </div>
+                                <h5 className='text-lg font-medium'>{course.author.cost}</h5>
                             </div>
                         </div>
                     </div>
