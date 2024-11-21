@@ -112,13 +112,13 @@ const PopularCourses = async () => {
 
                             {/* Author and Cost */}
                             <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-2">
                                     <div className="avatar">
-                                        <div className="w-[50px] rounded-full">
+                                        <div className="w-[40px] rounded-full">
                                             <Image
                                                 src="/one.png"
-                                                width={50}
-                                                height={50}
+                                                width={40}
+                                                height={40}
                                                 alt="Author profile"
                                             />
                                         </div>
