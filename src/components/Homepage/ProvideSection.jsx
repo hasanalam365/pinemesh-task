@@ -16,7 +16,7 @@ const ProvideSection = () => {
                 ]
 
     return (
-        <div className="flex justify-between gap-8 mx-8 mt-16">
+        <div className="flex flex-col md:flex-col lg:flex-row justify-between gap-8 mx-8 mt-16">
             {/* Left Section */}
             <div className="flex-1">
                 <h2 className="text-3xl font-semibold mb-8">We provide....</h2>
@@ -49,8 +49,8 @@ const ProvideSection = () => {
             </div>
 
             {/* Right Section */}
-            <div className='relative'>
-                <Image src="/provide.png" alt="Provide Image" width={450} height={350} />
+            <div className='relative  '>
+                <Image src="/provide.png" alt="Provide Image" width={450} height={350}  className="w-full object-cover"/>
                 <div className='absolute top-20 -left-8 bg-[#287279] p-2 rounded-full border-8 border-white'>
                     <PiShieldCheckFill className='text-xl text-white'/>
                 </div>

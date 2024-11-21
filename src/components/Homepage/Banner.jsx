@@ -33,7 +33,7 @@ const Banner = () => {
                     </div>
 
                 
-                    <div className="relative w-full ">
+                    <div className="relative">
                   
                         <Image
                             src="/banner.png"
