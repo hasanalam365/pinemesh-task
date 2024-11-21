@@ -6,6 +6,8 @@ import '@smastrom/react-rating/style.css';
 import { MdMenuBook } from "react-icons/md";
 import { CiStopwatch } from "react-icons/ci";
 import { TbCircleCheckFilled } from "react-icons/tb";
+import { PiShoppingCartSimple } from "react-icons/pi";
+import { FiHeart } from "react-icons/fi";
 
 const courses = async () => {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
@@ -42,9 +44,12 @@ const PopularCourses = async () => {
             {/* Courses Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {allCourses.map((course, index) => (
-                    <div key={index} className="card card-compact bg-base-100 shadow-xl hover:bg-[#dbdbf186] hover:border-2 hover:border-[#a1a1d4]">
+                    <div
+                        key={index}
+                        className="card card-compact bg-base-100 shadow-xl group relative hover:bg-[#dbdbf186] hover:border-2 hover:border-[#a1a1d4]"
+                    >
                         {/* Card Image */}
-                        <figure>
+                        <figure className="relative">
                             <Image
                                 src="/one.png"
                                 alt="Course card"
@@ -52,6 +57,16 @@ const PopularCourses = async () => {
                                 height={300}
                                 className="object-cover"
                             />
+
+                            {/* Hover Icons */}
+                            <div className="absolute top-3 right-3 flex justify-end gap-4 opacity-0 group-hover:opacity-100  bg-opacity-30 transition-opacity">
+                                <button className="p-2 bg-white rounded-full shadow-md">
+                                    <PiShoppingCartSimple className="text-xl text-gray-700" />
+                                </button>
+                                <button className="p-2 bg-white rounded-full shadow-md">
+                                    <FiHeart className="text-xl text-red-500" />
+                                </button>
+                            </div>
                         </figure>
 
                         {/* Card Body */}
@@ -110,21 +125,14 @@ const PopularCourses = async () => {
                                     </div>
                                     <h5 className="text-lg font-medium">{course.author.name}</h5>
                                 </div>
-                               
-                                {
-  course.author.cost === "enrolled" ? (
-                                        <div className='flex items-center justify-center gap-1 bg-[#F2F2F2] border-2  border-gray-400 border-opacity-75 p-1 rounded-lg '>
-                                             <TbCircleCheckFilled className="inline-block text-gray-500" />
-                                            <h5 className="text-lg font-medium">
-                                                 {course.author.cost}
-                                            </h5>
-                                            
-   </div>
-  ) : (
-    <h5 className="text-lg font-medium">{course.author.cost}</h5>
-  )
-}
-
+                                {course.author.cost === "enrolled" ? (
+                                    <div className="flex items-center justify-center gap-1 bg-[#F2F2F2] border-2 border-gray-400 border-opacity-75 p-1 rounded-lg">
+                                        <TbCircleCheckFilled className="inline-block text-gray-500" />
+                                        <h5 className="text-lg font-medium">{course.author.cost}</h5>
+                                    </div>
+                                ) : (
+                                    <h5 className="text-lg font-medium">{course.author.cost}</h5>
+                                )}
                             </div>
                         </div>
                     </div>
