@@ -5,6 +5,7 @@ import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
 import { MdMenuBook } from "react-icons/md";
 import { CiStopwatch } from "react-icons/ci";
+import { TbCircleCheckFilled } from "react-icons/tb";
 
 const courses = async () => {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
@@ -109,7 +110,21 @@ const PopularCourses = async () => {
                                     </div>
                                     <h5 className="text-lg font-medium">{course.author.name}</h5>
                                 </div>
-                                <h5 className="text-lg font-medium">{course.author.cost}</h5>
+                               
+                                {
+  course.author.cost === "enrolled" ? (
+                                        <div className='flex items-center justify-center gap-1 bg-[#F2F2F2] border-2  border-gray-400 border-opacity-75 p-1 rounded-lg '>
+                                             <TbCircleCheckFilled className="inline-block text-gray-500" />
+                                            <h5 className="text-lg font-medium">
+                                                 {course.author.cost}
+                                            </h5>
+                                            
+   </div>
+  ) : (
+    <h5 className="text-lg font-medium">{course.author.cost}</h5>
+  )
+}
+
                             </div>
                         </div>
                     </div>
