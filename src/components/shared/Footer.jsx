@@ -38,17 +38,20 @@ const Footer = () => {
                     <a className="hover:underline hover:cursor-pointer">Visit our forum</a>
                 </nav>
             </footer>
-            <div className=" border-dashed border-b-2 border-gray-400 mb-3"></div>
+            <div className='mx-48 pb-16'>
+                 <div className=" border-dashed border-b-2 border-gray-400 mb-3"></div>
             <div className='flex items-center justify-between'>
-                <h4>Join our official channels</h4>
+                <h4 className='text-xl font-medium'>Join our official channels</h4>
                 <div className='flex items-center justify-center gap-3'>
-                    <AiFillInstagram />
-                    <FaSquareXTwitter />
-                    <FaFacebook />
-                    <BsDiscord />
+                    <AiFillInstagram className='text-2xl'/>
+                    <FaSquareXTwitter className='text-2xl'/>
+                    <FaFacebook className='text-2xl'/>
+                    <BsDiscord className='text-2xl'/>
                 </div>
             </div>
-             <div class=" border-dashed border-b-2 border-gray-400 my-3"></div>
+                <div className=" border-dashed border-b-2 border-gray-400 my-3"></div>
+              <p className='opacity-75'>  ©2024 EduPath. All rights reserved</p>
+           </div>
 
         </div>
     );
