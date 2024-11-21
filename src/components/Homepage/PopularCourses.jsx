@@ -40,9 +40,9 @@ const PopularCourses = async () => {
             </div>
 
             {/* Courses Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {allCourses.map((course, index) => (
-                    <div key={index} className="card card-compact bg-base-100 shadow-xl hover:bg-[#dbdbf186]">
+                    <div key={index} className="card card-compact bg-base-100 shadow-xl hover:bg-[#dbdbf186] hover:border-2 hover:border-[#a1a1d4]">
                         {/* Card Image */}
                         <figure>
                             <Image
