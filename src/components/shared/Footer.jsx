@@ -7,7 +7,7 @@ import { BsDiscord } from "react-icons/bs";
 const Footer = () => {
     return (
         <div className='bg-[#d7d7e9] '>
-            <footer className="footer flex justify-evenly p-10">
+            <footer className="footer grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-evenly p-10">
                
                 <nav>
                     <h6 className="text-lg opacity-75">Categories</h6>
@@ -39,9 +39,9 @@ const Footer = () => {
                     <a className="hover:underline hover:cursor-pointer">Visit our forum</a>
                 </nav>
             </footer>
-            <div className='mx-48 pb-16'>
+            <div className='mx-4 md:mx-10 md:pb-8 lg::mx-48 lg:pb-16'>
                  <div className=" border-dashed border-b-2 border-gray-400 mb-3"></div>
-            <div className='flex items-center justify-between'>
+            <div className='flex flex-col md:flex-row lg:flex-row gap-2 items-center justify-between'>
                 <h4 className='text-xl font-medium'>Join our official channels</h4>
                 <div className='flex items-center justify-center gap-3'>
                     <AiFillInstagram className='text-2xl'/>
@@ -51,7 +51,7 @@ const Footer = () => {
                 </div>
             </div>
                 <div className=" border-dashed border-b-2 border-gray-400 my-3"></div>
-              <p className='opacity-75'>  ©2024 EduPath. All rights reserved</p>
+              <p className='opacity-75 text-center md:text-start lg:text-start'>  ©2024 EduPath. All rights reserved</p>
            </div>
 
         </div>
