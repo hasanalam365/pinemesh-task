@@ -4,6 +4,7 @@ import React from 'react';
 import { Rating } from '@smastrom/react-rating'
 
 import '@smastrom/react-rating/style.css'
+import { ImLeaf } from "react-icons/im";
 
 const Banner = () => {
     return (
@@ -56,6 +57,9 @@ const Banner = () => {
                                     quality of life
                                 </p>
                             </div>
+                        </div>
+                        <div className="absolute top-28 -left-8 bg-[#287279] p-[10px] rounded-full border-8 border-white">
+                           <ImLeaf className="text-2xl text-white" />
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaCircleCheck } from "react-icons/fa6";
 
+
 const ProvideSection = () => {
    
     const [isOpenService, setIsOpenService] = useState(0);
@@ -18,8 +19,10 @@ const ProvideSection = () => {
         <div className="flex justify-between gap-8 mx-8 mt-16">
             {/* Left Section */}
             <div className="flex-1">
-                <h2 className="text-xl font-semibold mb-8">We provide...</h2>
-
+                <h2 className="text-3xl font-semibold mb-8">We provide..</h2>
+ <div className="">
+                  
+                        </div>
                 {/* Accordion Items */}
                 {allServices.map((service, index) => (
                     <div key={service.id} className={`collapse bg-base-200 ${index > 0 ? 'mt-3' : ''} `}
