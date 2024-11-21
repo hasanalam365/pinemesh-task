@@ -1,4 +1,8 @@
 import React from 'react';
+import { AiFillInstagram } from "react-icons/ai";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { BsDiscord } from "react-icons/bs";
 
 const Footer = () => {
     return (
@@ -34,6 +38,18 @@ const Footer = () => {
                     <a className="hover:underline hover:cursor-pointer">Visit our forum</a>
                 </nav>
             </footer>
+            <div className=" border-dashed border-b-2 border-gray-400 mb-3"></div>
+            <div className='flex items-center justify-between'>
+                <h4>Join our official channels</h4>
+                <div className='flex items-center justify-center gap-3'>
+                    <AiFillInstagram />
+                    <FaSquareXTwitter />
+                    <FaFacebook />
+                    <BsDiscord />
+                </div>
+            </div>
+             <div class=" border-dashed border-b-2 border-gray-400 my-3"></div>
+
         </div>
     );
 };
