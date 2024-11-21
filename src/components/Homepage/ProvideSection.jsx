@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaCircleCheck } from "react-icons/fa6";
-
+import { PiShieldCheckFill } from "react-icons/pi";
 
 const ProvideSection = () => {
    
@@ -19,7 +19,7 @@ const ProvideSection = () => {
         <div className="flex justify-between gap-8 mx-8 mt-16">
             {/* Left Section */}
             <div className="flex-1">
-                <h2 className="text-3xl font-semibold mb-8">We provide..</h2>
+                <h2 className="text-3xl font-semibold mb-8">We provide....</h2>
  <div className="">
                   
                         </div>
@@ -49,8 +49,11 @@ const ProvideSection = () => {
             </div>
 
             {/* Right Section */}
-            <div>
+            <div className='relative'>
                 <Image src="/provide.png" alt="Provide Image" width={450} height={350} />
+                <div className='absolute top-20 -left-8 bg-[#287279] p-2 rounded-full border-8 border-white'>
+                    <PiShieldCheckFill className='text-xl text-white'/>
+                </div>
             </div>
         </div>
     );
