@@ -25,11 +25,9 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme="pinemeshTheme">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navbar></Navbar>
-
-        {children}
-
-        <Footer></Footer>
+        <Navbar />
+        <div className="min-h-[calc(100vh-344px)] pt-[68px]">{children}</div>
+        <Footer />
       </body>
     </html>
   );

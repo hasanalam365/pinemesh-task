@@ -6,8 +6,9 @@ import { BsDiscord } from "react-icons/bs";
 
 const Footer = () => {
     return (
-        <div className='bg-[#d7d7e9]'>
+        <div className='bg-[#d7d7e9] '>
             <footer className="footer flex justify-evenly p-10">
+               
                 <nav>
                     <h6 className="text-lg opacity-75">Categories</h6>
                     <a className="hover:underline hover:cursor-pointer">Nutrition and diet</a>
