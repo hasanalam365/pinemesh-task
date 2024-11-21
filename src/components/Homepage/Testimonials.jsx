@@ -69,14 +69,14 @@ const reviews = [
 const Testimonials = () => {
   return (
     <div className="mt-16 px-4 lg:px-8 mb-10">
-      {/* Section Heading */}
-      <h2 className="text-3xl font-semibold text-center mb-10 w-1/2 mx-auto">
+    
+      <h2 className="text-3xl font-semibold text-center mb-10 w-[90%] md:w-[80%] lg:w-1/2 mx-auto">
        Learners love EduPath. See why they rate us 4.9 out of 5
       </h2>
 
-      {/* Swiper Testimonials */}
+     
       <Swiper
-        slidesPerView={4}
+      
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -89,8 +89,23 @@ const Testimonials = () => {
        
         modules={[Autoplay, Pagination]}
         className="mySwiper"
+        breakpoints={{
+         
+          0: {
+            slidesPerView: 1,
+          },
+        
+          768: {
+            slidesPerView: 2,
+          },
+         
+          1024: {
+            slidesPerView: 4,
+          },
+        }}
       >
-        {reviews.map((review, index) => (
+        <div className=''>
+           {reviews.map((review, index) => (
           <SwiperSlide key={index}>
             <div className="w-full shadow-xl p-6 bg-[#d1d0f8] rounded-lg hover:shadow-2xl transition-shadow">
               <div className="flex items-center justify-between">
@@ -118,6 +133,7 @@ const Testimonials = () => {
             </div>
           </SwiperSlide>
         ))}
+       </div>
       </Swiper>
     </div>
   );
