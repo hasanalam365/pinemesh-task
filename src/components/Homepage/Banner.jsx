@@ -1,10 +1,9 @@
 "use client";
 import Image from 'next/image';
 import React from 'react';
-// import { Rating } from '@smastrom/react-rating';
-
-// import '@smastrom/react-rating/style.css';
 import { ImLeaf } from "react-icons/im";
+import { FaStar } from "react-icons/fa6";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 const Banner = () => {
     return (
@@ -14,7 +13,13 @@ const Banner = () => {
                  
                     <div className="flex flex-col justify-center text-center md:text-left">
                         <div className="flex justify-center md:justify-start items-center gap-2 mb-5">
-                            {/* <Rating style={{ maxWidth: 130 }} value={4.52} readOnly /> */}
+                            <div className='flex items-center gap-1 text-yellow-600 text-lg'>
+                                <FaStar />
+                                <FaStar />
+                                <FaStar />
+                                <FaStar />
+                                <FaRegStarHalfStroke />
+                           </div>
                             <p className="font-medium">4.9 (560)</p>
                         </div>
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold w-full md:w-3/4">

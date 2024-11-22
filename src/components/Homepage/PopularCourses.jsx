@@ -3,13 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-// import { Rating } from '@smastrom/react-rating';
-// import '@smastrom/react-rating/style.css';
 import { MdMenuBook } from "react-icons/md";
 import { CiStopwatch } from "react-icons/ci";
 import { TbCircleCheckFilled } from "react-icons/tb";
 import { PiShoppingCartSimple } from "react-icons/pi";
 import { FiHeart } from "react-icons/fi";
+import { FaStar } from "react-icons/fa6";
+import { FaRegStarHalfStroke } from "react-icons/fa6";
 
 const PopularCourses = () => {
     const [allCourses, setAllCourses] = useState([]);
@@ -123,7 +123,13 @@ const PopularCourses = () => {
 
                            
                                 <div className="flex items-center gap-2 mb-5">
-                                    {/* <Rating style={{ maxWidth: 110 }} value={course.rating} readOnly /> */}
+                                   <div className='flex items-center gap-1 text-yellow-600 text-lg'>
+                                <FaStar />
+                                <FaStar />
+                                <FaStar />
+                                <FaStar />
+                                <FaRegStarHalfStroke />
+                           </div>
                                     <p className="font-medium">
                                         {course.rating} <span>({course.review})</span>
                                     </p>
