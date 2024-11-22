@@ -1,9 +1,9 @@
 "use client";
 import Image from 'next/image';
 import React from 'react';
-import { Rating } from '@smastrom/react-rating';
+// import { Rating } from '@smastrom/react-rating';
 
-import '@smastrom/react-rating/style.css';
+// import '@smastrom/react-rating/style.css';
 import { ImLeaf } from "react-icons/im";
 
 const Banner = () => {
@@ -14,17 +14,17 @@ const Banner = () => {
                  
                     <div className="flex flex-col justify-center text-center md:text-left">
                         <div className="flex justify-center md:justify-start items-center gap-2 mb-5">
-                            <Rating style={{ maxWidth: 130 }} value={4.52} readOnly />
+                            {/* <Rating style={{ maxWidth: 130 }} value={4.52} readOnly /> */}
                             <p className="font-medium">4.9 (560)</p>
                         </div>
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold w-full md:w-3/4">
                             #1 Platform Powering Health and Wellness
                         </h1>
                         <h5 className="pt-5 pb-2 font-medium w-full md:w-3/4">
-                            We’re restoring home as the primary place of personal well-being
+                            We are restoring home as the primary place of personal well-being
                         </h5>
                         <p className="w-full md:w-3/4">
-                            Health is not just about what you're eating. It's also about what you're thinking and saying.
+                            Health is not just about what you are eating. It is also about what you are thinking and saying.
                         </p>
                         <div className="mt-4 flex justify-center md:justify-start gap-4">
                             <button className="btn btn-primary">Browse Courses</button>
